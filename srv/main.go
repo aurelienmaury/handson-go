@@ -2,17 +2,22 @@ package main
 
 import (
 	"fmt"
-	"github.com/aurelienmaury/handson-go/cmn"
+	"handson-go/cmn"
 	"net/http"
+	"encoding/json"
 )
 
 func main() {
 	fmt.Println("Hello World")
 
+	var gstate Cmn.GameState
+	gstate.Partie = Cmn.WAIT
+	gstate.Turn = "You"
 
-
-	http.HandleFunc("/game/state/{joueur}", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("<h1>A simple web server</h1>"))
+	http.HandleFunc("/game/state", func(w http.ResponseWriter, r *http.Request) {
+		if err := json.NewEncoder(w).Encode(gstate); err != nil {
+			panic(err)
+		}
 	})
 
 	http.ListenAndServe(":8080", nil)

@@ -2,7 +2,6 @@ package main
 
 import (
 	"net/http"
-	 "github.com/aurelienmaury/handson-go/cmn"
 )
 
 type Route struct {
