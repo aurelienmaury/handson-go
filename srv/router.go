@@ -1,7 +1,6 @@
 package main
 
 import ("net/http"
-
 	"github.com/gorilla/mux"
 	"github.com/aurelienmaury/handson-go/cmn"
 )
