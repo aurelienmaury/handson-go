@@ -16,18 +16,14 @@ var states = [...]string{
 	"WIN",
 }
 
-func (state State) string() string {
+func (state State) String() string {
 	return states[state - 1]
-}
-
-type Board struct {
-
 }
 
 type GameState struct {
 	Partie State `json:"partie"`
 	Turn   string `json:"turn"`
-	Grid   Board `json:"grid_lines"`
+	Grid  [3]map[string]string `json:"grid_lines"`
 }
 
 
