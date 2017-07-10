@@ -1,19 +1,11 @@
 package main
 
 import (
-    "log"
-    "net/http"
+    "fmt"
 )
 
-type Gameboard struct {
-    grid_lines
-}
-
-type Env struct {
-    session *mgo.Session
-}
 
 func main() {
-
+    fmt.Println("Hello World")
 }
 
