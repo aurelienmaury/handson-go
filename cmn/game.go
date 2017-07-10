@@ -1,4 +1,4 @@
-package main
+package Cmn
 
 
 type State int
