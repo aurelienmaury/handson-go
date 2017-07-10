@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
+	"github.com/aurelienmaury/handson-go/cmn"
+	"net/http"
 )
-import "net/http"
-import "github.com/aurelienmaury/handson-go/cmn"
 
 func main() {
 	fmt.Println("Hello World")

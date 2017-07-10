@@ -18,7 +18,7 @@ var routes = Routes{
 	Route{
 		"Index",
 		"GET",
-		"/",
-		Handlers.Index,
+		"/game/state/{joueur}",
+		GetStatePlayer,
 	},
 }
